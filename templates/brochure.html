@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Navbar</title>
+  <!-- Add Bootstrap CSS link -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+    .navbar {
+            background-color: #888;
+            /* Grey color for the background */
+            position: sticky;
+            top: 0;
+            /* Make the navbar sticky at the top */
+            z-index: 999; /* Ensure the navbar is above other elements */
+        }
+
+        .navbar-nav {
+            flex-grow: 1;
+            /* Use flex-grow to distribute available space */
+            justify-content: center;
+            /* Center the links in the navbar */
+        }
+
+        .navbar-nav .nav-item {
+            margin-right: 15px;
+            /* Add space between the links */
+        }
+
+        a:hover {
+            background: grey;
+            color: #AAAAAA;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+        }
+    /* Custom CSS */
+    .navbar {
+      background-color: #888; /* Grey color for the background */
+    }
+
+    .navbar-nav {
+      flex-grow: 1; /* Use flex-grow to distribute available space */
+      justify-content: center; /* Center the links in the navbar */
+    }
+
+    .navbar-nav .nav-item {
+      margin-right: 15px; /* Add space between the links */
+    }
+
+    a:hover {
+        background:grey;
+        color: #AAAAAA;
+    }
+
+    .brochure-images {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 20px; /* Adjust the top margin as needed */
+    }
+
+    .brochure-images .project-container {
+      width: calc(100% - 40px); /* Adjust the width and margin as needed for responsiveness */
+      margin: 10px;
+      border-radius: 20px; /* Adjust the value to control the roundness of the border */
+      overflow: hidden; /* This ensures that the images stay within the rounded container */
+      height: auto; /* Adjust the height to fit the image within the viewport */
+    }
+
+    .brochure-images img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* Ensure the entire image is visible without distortion */
+    }
+    .project-image {
+  max-height: 400px;
+  width: auto; /* This ensures the image maintains its aspect ratio */
+}
+
+  </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <a    style="font-size: large; font-weight: bolder; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;" class="   navbar-brand" href="#">YOGI</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav mx-auto"> <!-- Use mx-auto class to center the links -->
+          <a  style="font-size: large; color: black; font-weight: bold;"  class="nav-item nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+          <a  style=" font-size: large; color: black; font-weight: bold;" class="nav-item nav-link" href="/videos">Videos</a>
+          <a  style=" font-size: large;  color: black; font-weight: bold;" class="nav-item nav-link" href="/brochure">Brochure</a>
+  
+        </div>
+      </div>
+    </nav> 
+    <main>
+        <div class="brochure-images">
+          <!-- Add separate containers for images of your client's projects here -->
+          <div class="project-container">
+            <img src="/static/./img/yogi1.jpg" alt="Project 1">
+          </div>
+          <div class="project-container">
+            <img src="/static/./img/yogi1.jpg" alt="Project 2">
+          </div>
+          <!-- Add more containers for other projects -->
+        </div>
+      </main>
+  
+    <!-- Your website content goes here -->
+  
+    <!-- Add Bootstrap JS and jQuery script links for toggling the navbar on mobile -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+  </html>
